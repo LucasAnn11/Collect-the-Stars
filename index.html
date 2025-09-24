@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Collect the Stars</title>
+  <!-- link to CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Collect the Stars</h1>
+      <p class="lead">Click every floating star to collect them. When all 5 are collected — you win!</p>
+
+      <div class="game clouds">
+        <div class="bg-stars"></div>
+
+        <!-- Hidden checkboxes (game state) -->
+        <input id="s1" class="collect-input" type="checkbox" />
+        <label for="s1" class="star"></label>
+
+        <input id="s2" class="collect-input" type="checkbox" />
+        <label for="s2" class="star"></label>
+
+        <input id="s3" class="collect-input" type="checkbox" />
+        <label for="s3" class="star"></label>
+
+        <input id="s4" class="collect-input" type="checkbox" />
+        <label for="s4" class="star"></label>
+
+        <input id="s5" class="collect-input" type="checkbox" />
+        <label for="s5" class="star"></label>
+
+        <!-- HUD hint -->
+        <div class="hud">Stars collected: click them all ✨</div>
+
+        <!-- Win overlay -->
+        <div class="win">
+          <div class="panel">
+            <h2>🎉 You win!</h2>
+            <p>Nice job — you collected all the stars.</p>
+            <a class="btn" href="">Play again</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
