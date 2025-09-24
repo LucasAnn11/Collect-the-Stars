@@ -1,0 +1,36 @@
+:root{
+  --bg:#081229;
+  --panel:#0f1b33;
+  --accent:#ffd24d;
+  --muted:#9bb0d6;
+}
+
+body{
+  margin:0;
+  font-family:system-ui;
+  background:linear-gradient(180deg,var(--bg),#041025);
+  color:white;
+}
+
+/* Layout */
+.wrap{display:grid;place-items:center;min-height:100vh;}
+.card{background:#0f1b33;padding:20px;border-radius:10px;}
+
+/* Stars */
+.collect-input{position:absolute;opacity:0;}
+.star{
+  width:50px;height:50px;background:var(--accent);
+  border-radius:50%;display:inline-block;
+  margin:20px;cursor:pointer;transition:.3s;
+}
+.collect-input:checked + .star{opacity:0;transform:scale(0);}
+
+/* HUD */
+.hud{margin-top:10px;color:var(--muted);}
+
+/* Win screen */
+.win{display:none;text-align:center;margin-top:20px;}
+.collect-input:checked ~ .collect-input:checked ~ .collect-input:checked ~ .collect-input:checked ~ .collect-input:checked ~ .win{
+  display:block;
+}
+.btn{display:inline-block;padding:10px 15px;background:var(--accent);color:black;border-radius:6px;text-decoration:none;}
